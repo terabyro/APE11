@@ -1,2 +1,5 @@
 # Versionamento e Git
- Primeiro repositório
+ Academico: Franciclay da Conceição
+ RA: 09020526
+
+ 
