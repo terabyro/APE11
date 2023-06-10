@@ -1,5 +1,5 @@
 # Versionamento e Git
- Academico: Franciclay da Conceição
- RA: 09020526
+ **Academico:** Franciclay da Conceição
+ **RA:** 09020526
 
  
