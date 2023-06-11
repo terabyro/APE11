@@ -14,7 +14,8 @@
 
  5. Qual a importancia da utilização do controle de versionamento no desenvolvimento de software?
 
- 6. Cite pelo menos três ferramentas de controle de versão e faça um breve detalamento sobre cada uma delas. 
+ 6. Cite pelo menos três ferramentas de controle de versão e faça um breve detalamento sobre cada uma delas.
+  
 
 
  
