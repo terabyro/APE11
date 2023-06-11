@@ -1,11 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>APE 11 | Git</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-logo">
+        <img src="assets/images/logo-git.png" alt="logo git" />
+      </div>
+      <div class="header-menus">
+        <a href="index.html">Home</a>
+        <a href="git-sem-flow.html">Git sem flow</a>
+        <a href="git-com-flow.html">Git com flow</a>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="main-title">
+        <h1>Perguntas sobre o Git</h1>
+      </div>
+
+      <div class="questions-container">
+        <div class="questions">
+          <span>
+            1 - Para que serve o commit e qual a melhor forma de
+            utilizá-lo?</span
+          >
+          <p>
+            De forma mais ampla, em ciência da computação, um commit é uma
+            confirmação de alterações feitas, marcando o fim de uma transação.
+          </p>
+          <p>
+            Em um sistema de versionamento de código, como nosso exemplo o Git,
+            o commit confirma e faz uma marcação para todas as alterações
+            adicionadas à ele, gerando um histórico de commits e sendo possível
+            fazer um checkout em cada um.
+          </p>
+          <p>
+            Não existe somente uma melhor forma de utilizar o commit, mas
+            existem boas práticas, as quais são muito comuns no mundo do
+            desenvolvimento de software. De tão importante que são as boas
+            práticas que foi criado o
+            <a
+              href="https://www.conventionalcommits.org/en/v1.0.0/"
+              target="_blank"
+              title="Saiba mais"
+              class="link-in-text"
+            >
+              Conventional Commits,
+            </a>
+            uma iniciativa que tenta oficializar a forma correta de se fazer
+            commits.
+          </p>
+          <p>
+            Como boa prática, o commit deve ser feito sempre que um trecho de
+            código for feito e estiver funcionando. Ao fazer esse commit ele
+            deve conter uma mensagem auto explicativa do que foi feito naquela
+            versão. Seguindo o Conventional Commits, essas mensagens devem
+            seguir de um prefixo, que identifique se é uma correção (fix:), nova
+            funcionalidade (feat:) e até correção em produção (hotfix:).
+          </p>
+        </div>
+
+        <div class="questions">
+          <span>2 - Qual a diferença entre commit e push?</span>
+          <p>
+            Como visto anteriormente o commit é a confirmação e finalização das
+            alterações adicionadas à ele, já o push “empurra” ou seja faz o
+            envio de todos os commits, ainda não enviados, do repositório local
+            para o repositório remoto.
+          </p>
+          <p>
+            É possível fazer um push a cada commit realizado, mas também fazer
+            vários commits e depois um push para todos os commits.
+          </p>
+          <p>
+            Ao fazer o push você mantém o repositório remoto atualizado e em
+            caso de trabalho em equipe, todos poderão baixar a versão mais
+            atualizada do código principal, ou branches paralelas ao projeto.
+          </p>
+        </div>
+
+        <div class="questions">
+          <span>3 - O que é tag?</span>
+          <p>
+            As tags no Git funcionam como uma marcação no histórico de commits.
+            Elas são muito utilizadas para determinar versões do código e ou
+            software, por exemplo a versão 1.5.2, seguindo o padrão de
+            <a
+              href="https://semver.org/lang/pt-BR/"
+              target="_blank"
+              title="Saiba mais"
+              class="link-in-text"
+            >
+              versionamento semântico,
+            </a>
+            indica que naquele ponto da história do código, a versão é essa.
+          </p>
+          <p>
+            Depois de criada uma tag, ela não recebe mais atualizações, ou seja,
+            ela delimita o início e fim dos históricos dos commits realizados.
+            Em caso de novas funcionalidades ou correções, elas deverão ser
+            adicionadas a outra tag. Seguindo o exemplo acima e digamos que foi
+            lançado uma versão de correção, a próxima tag teria a sequência de
+            1.5.3.
+          </p>
+        </div>
+
+        <div class="questions">
+          <span>4 - O que é branch?</span>
+          <p>
+            Uma branch é uma ramificação do código principal, elas são muito
+            utilizadas nos sistemas de controles de versão mais modernos.
+          </p>
+          <p>
+            Vamos usar o exemplo de um trabalho em equipe, onde precisa ser
+            feito uma correção de uma versão. O desenvolvedor cria uma branch a
+            partir do código principal, trabalha nas correções, faz os devidos
+            commits, faz um push e faz os devidos testes deste código. Depois
+            desse processo e caso esteja tudo certo, essa branch está apta a
+            fazer o merge com o código principal.
+          </p>
+          <p>
+            Na grande maioria dos trabalhos em equipes, sempre é utilizado
+            branches para o desenvolvimento, seja para correções ou novas
+            funcionalidades.
+          </p>
+        </div>
+
+        <div class="questions">
+          <span>5 - Como resolver possíveis conflitos no Git?</span>
+          <p>
+            Os conflitos no Git são muito comuns, principalmente com trabalho em
+            equipe, mas como o Git é uma ferramenta fantástica, ele nos ajuda a
+            resolver esses problemas.
+          </p>
+          <p>
+            Conflitos de merge ocorrem quando se tem duas ou mais versões do
+            mesmo ponto do código, exemplo, digamos que um desenvolvedor alterou
+            a linha 25 de um arquivo e outro também alterou a mesma linha, ambos
+            fazem o commit e push de suas alterações. Com isso o Git não
+            conseguirá fazer o merge automático dessas alterações pois não sabe
+            qual é a versão que deverá manter, nesses casos é preciso
+            intervenção manual para resolver o conflito.
+          </p>
+          <p>
+            Após resolver o conflito será preciso fazer um novo commit e push
+            para o repositório remoto. Vale ressaltar que os conflitos de merge
+            ocorrem tanto entre branches quanto entre commits dentro da mesma
+            branch.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <span></span>
+      <a
+        href=""
+        target="_blank"
+        class="footer-developed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <rect
+            x="36"
+            y="36"
+            width="184"
+            height="184"
+            rx="8"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></rect>
+          <line
+            x1="120"
+            y1="112"
+            x2="120"
+            y2="176"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <line
+            x1="88"
+            y1="112"
+            x2="88"
+            y2="176"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <path
+            d="M120,140a28,28,0,0,1,56,0v36"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></path>
+          <circle cx="88" cy="80" r="12"></circle>
+        </svg>
+        <span></span>
+      </a>
+    </footer>
+  </body>
 </html>
